@@ -1,0 +1,49 @@
+:root {
+    /* Theme 2 */
+    /* Backgrounds */
+    --main-background-2: hsl(0, 0%, 90%);
+    --toggle-keypad-background-2: hsl(0, 5%, 81%);
+    --screen-background-2: hsl(0, 0%, 93%);
+
+    /* Keys */
+    --key-background-cyan-2: hsl(185, 42%, 37%);
+    --key-shadow-cyan-2: hsl(185, 58%, 25%);
+
+    --key-background-toggle-2: hsl(25, 98%, 40%);
+    --key-shadow-toggle-2: hsl(25, 99%, 27%);
+
+    --key-background-2: hsl(45, 7%, 89%);
+    --key-shadow-2: hsl(35, 11%, 61%);
+
+    /* Text */
+    --text-btn-yellow-2: hsl(60, 10%, 19%);
+    --text-btn-white-2: hsl(0, 0%, 100%);
+}
+
+.body-2 {
+    background-color: var(--main-background-2);
+}
+
+.container-display-2 {
+    background-color: var(--screen-background-2);
+}
+
+.container_numbers-2 {
+    background-color: var(--toggle-keypad-background-2);
+}
+
+.btn-2:hover {
+    background-color: var(--text-btn-white);
+    box-shadow: 0 1px var(--key-shadow);
+}
+
+.reset-2,
+.del-2 {
+    background-color: var(--key-background-cyan-2);
+    box-shadow: 0 3px var(--key-shadow-cyan-2);
+}
+
+.reset-2:hover,
+.del-2:hover {
+    background-color: hsl(185, 37%, 56%);
+}
