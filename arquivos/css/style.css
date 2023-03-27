@@ -28,42 +28,31 @@
     --text-btn-white: hsl(0, 0%, 100%);
 
 
-    /* Theme 2 */
+    /* ### Theme 2 */
 
-/* Backgrounds */
+    /* #### Backgrounds */
 
-    --main-background-2: hsl(0, 0%, 90%)
-- Grayish red (toggle background, keypad background): hsl(0, 5%, 81%)
-- Very light gray (screen background): hsl(0, 0%, 93%)
+    --main-background-t2: hsl(0, 0%, 90%);
+    --toggle-keypad-background-t2: hsl(0, 5%, 81%);
+    --screen-background-t2: hsl(0, 0%, 93%);
 
-#### Keys
+    --key-background-cyan-t2: hsl(185, 42%, 37%);
+    --key-shadow-cyan: hsl(185, 58%, 25%);
 
-- Dark moderate cyan (key background): hsl(185, 42%, 37%)
-- Very dark cyan (key shadow): hsl(185, 58%, 25%)
+    --key-background-toggle-orange-t2: hsl(25, 98%, 40%);
+    --key-shadow-toggle-orange-t2: hsl(25, 99%, 27%);
 
-- Orange (key background, toggle): hsl(25, 98%, 40%)
-- Dark orange (key shadow): hsl(25, 99%, 27%)
+    /* Text */
+    --text-btn-t2: hsl(60, 10%, 19%);
 
-- Light grayish yellow (key background): hsl(45, 7%, 89%)
-- Dark grayish orange (key shadow): hsl(35, 11%, 61%)
-
-#### Text
-
-- Very dark grayish yellow: hsl(60, 10%, 19%)
-- White (text): hsl(0, 0%, 100%)
 }
 
 body {
-    background-color: var(--main-background);
     font-family: 'League Spartan', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-}
-
-.body_theme-two {
-    background-color: hsl(0, 0%, 90%);
 }
 
 .title {
@@ -74,7 +63,6 @@ body {
 .container {
     margin: 0 auto;
     max-width: max-content;
-
 }
 
 .container_calc {
@@ -122,14 +110,11 @@ body {
     cursor: pointer;
 }
 
-.container_themes {
-    color: var(--text-btn-white);
-}
+
 
 /* calc display*/
 
 .container_display {
-    background-color: var(--screen-background);
     width: 100%;
     height: 90px;
     margin-top: 10px;
@@ -141,7 +126,6 @@ body {
 .container_numbers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    background-color: var(--toggle-keypad-background);
     grid-gap: 20px;
     padding: 20px;
     margin-top: 15px;
@@ -157,9 +141,8 @@ body {
     text-transform: uppercase;
     border: none;
     border-radius: 5px;
-    background-color: var(--key-background);
-    box-shadow: 0 3px var(--key-shadow);
     transition: ease-in-out .1s;
+    box-shadow: 0 3px var(--key-shadow);
 }
 
 .btn:hover {
@@ -169,34 +152,27 @@ body {
 
 .reset {
     grid-column: 1 / span 2;
-    background-color: var(--key-background-blue);
-    box-shadow: 0 3px var(--key-shadow-blue);
     color: var(--text-btn-white);
     transition: ease-in-out .1s;
 }
 
 .del {
-    background-color: var(--key-background-blue);
-    box-shadow: 0 3px var(--key-shadow-blue);
     color: var(--text-btn-white);
     transition: ease-in-out .1s;
 }
 
-.reset:hover,
-.del:hover {
-    background-color: hsl(225, 25%, 62%);
+#reset-t1:hover {
+    background-color: hsl(225, 27%, 65%);
     box-shadow: 0 1px var(--key-shadow-blue);
 }
 
 .eq {
     grid-column: 3 / span 2;
-    background-color: var(--key-background-toggle);
-    box-shadow: 0 3px var(--key-shadow-toggle);
     color: var(--text-btn-white);
     transition: ease-in-out .1s;
 }
 
-.eq:hover {
+#eq-t1:hover {
     background-color: hsl(6, 70%, 59%);
     box-shadow: 0 1px var(--key-shadow-toggle);
 }
