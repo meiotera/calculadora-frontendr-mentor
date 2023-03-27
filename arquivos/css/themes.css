@@ -1,0 +1,65 @@
+/* #################### theme - 1 ######################### */
+
+#body-t1 {
+    background-color: var(--main-background);
+}
+
+#container_themes-t1 {
+    color: var(--text-btn-white);
+}
+
+#container_display-t1 {
+    background-color: var(--screen-background);
+}
+
+#container_numbers-t1 {
+    background-color: var(--toggle-keypad-background);
+}
+
+#btn-t1 {
+    background-color: var(--key-background);
+
+}
+
+#reset-t1 {
+    background-color: var(--key-background-blue);
+    box-shadow: 0 3px var(--key-shadow-blue);
+}
+
+#eq-t1 {
+    background-color: var(--key-background-toggle);
+    box-shadow: 0 3px var(--key-shadow-toggle);
+}
+
+/* ######################## theme - 2 ######################## */
+
+#body-t2 {
+    background-color: var(--main-background-t2);
+}
+
+#container_display-t2 {
+    background-color: var(--screen-background-t2);
+}
+
+#container_numbers-t2 {
+    background-color: var(--toggle-keypad-background-t2);
+}
+
+#btn-t2 {
+    background-color: var(--key-background-t2);
+    box-shadow: 0 3px var(--key-shadow-t2);
+}
+
+#reset-t2 {
+    background-color: var(--key-background-cyan-t2);
+    box-shadow: 0 3px var(--key-shadow-cyan);
+}
+
+#eq-t2 {
+    background-color: var(--key-background-toggle-orange-t2);
+    box-shadow: 0 3px var(--key-shadow-toggle-orange-t2);
+}
+
+#container_themes-t2 {
+    color: var(--text-btn-t2);
+}
