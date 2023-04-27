@@ -11,7 +11,7 @@
         let reset = document.querySelector('.reset');
         let del = document.querySelector('.del');
         let eq = document.querySelector('.eq');
-        let container_themes = document.querySelector('.container_themes')
+        let container_themes = document.querySelector('.container_themes')        
         
     
         switch(btnTheme) {
