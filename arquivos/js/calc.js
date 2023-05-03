@@ -1,9 +1,12 @@
+const buttons = document.querySelectorAll('.btn');
+let nums = [];
+let operator;
+
 function display(btn) {
     let display = document.querySelector('.container_display');
-    display.innerText += btn;    
+    display.innerText += btn;
 }
 
-const buttons = document.querySelectorAll('.btn');
 
 // Percorrendo os btns para executar a acao de mostrar na tela o valor
 buttons.forEach(function (btn) {
@@ -21,19 +24,21 @@ buttons.forEach(function (btn) {
 function reset() {
     const display = document.querySelector('.container_display');
     display.innerText = '';
+    nums = [];
+    operator;
 }
 
 function deleteOne() {
     let displays = document.querySelector('.container_display').innerText;
     let num = displays.slice(0, -1);
     reset();
-    display(num);    
+    display(num);
 }
 
-function checkSymbol(sym) {
-    let op = sym;
+function checkSymbol(value) {
+    let symbolBtn = value;
 
-    switch (op) {
+    switch (symbolBtn) {
         case 'reset':
             reset();
             break;
@@ -44,23 +49,45 @@ function checkSymbol(sym) {
         case '-':
         case 'x':
         case '/':
-            calcula(op)
+            capture(symbolBtn)
             break;
-    }    
-}
-
-let numUm;
-let numDois;
-const nums = [];
-
-function calcula(op) {
-    const operator = op;
-
-    if(numUm) {
-        
-        numDois = Number(document.querySelector('.container_display').innerText)
-    } else {
-        numUm = Number(document.querySelector('.container_display').innerText)
     }
 }
 
+function capture(op) {
+    operator = op;
+    if (nums.length === 2) return;
+    nums.push(Number(document.querySelector('.container_display').innerText));
+
+    // Apagando o display ao precionar os simbolos
+    const display = document.querySelector('.container_display');
+    display.innerText = '';
+
+    setUpOperation();
+}
+
+function setUpOperation() {
+
+    let numUm = nums[0];
+    let numDois = nums[1];
+    let total = 0;
+
+    if (operator === '+') {
+        total = numUm + numDois;
+    }
+
+    if (operator === '-') {
+        total = numUm - numDois;
+    }
+
+    if (operator === '/') {
+        total = numUm / numDois;
+    }
+
+    if (operator === 'x') {
+        total = numUm * numDois;
+    }
+
+    // exibe no display o total do calculo.
+    if (total) display(total)
+}
